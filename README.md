@@ -1,13 +1,22 @@
 
-    9  lib
-   10  ld
-   11  whoami
-   12  who
-   13  dc
-   14  cd
-   15  lib
-   16  ls
-   17  cd Desktop
+
+Commands
+
+whoami      Shows current user
+who         Shows name of the user who is logged in, their current enviroment, and date from which this session has started.
+
+cd
+ls          list the contents of the directory
+    -a      shows all entries (Hidden Files starting with .)
+    -l      show the long name of the directory 
+            ex. <div class="text-blue mb-2"> .d </div> drwxr-xr-x 38 evaldas evaldas   4096 Sep 14 11:05  .
+            
+
+
+    
+
+dir 
+
    18  echo $0
    19  ls
    20  echo $0
@@ -19,7 +28,7 @@
    26  man uname
    27  history
    28  ls
-   29  sh
+   29  shtext-blue on white
    30  who
    31  whoami
    32  pwd
