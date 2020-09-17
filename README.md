@@ -32,7 +32,8 @@ bash        Sets terminal to bash shell(default).
                                                                     Hotkeys
 
   Main hotkeys:
-    Ctrl+Alt+T    Open terminal
+    Ctrl+Alt+T        Open terminal
+    Ctrl+Alt+F1-F12   Switch between tty enviroments
   BASH
     ArrowUp     goes back in the list of typed commands.
     ArrowDown   goes to the front in the list of typed commands.
