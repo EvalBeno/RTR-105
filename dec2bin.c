@@ -19,10 +19,9 @@ int main()
         }
         bin[place]=1; //Writes the bit in the place where it is supposed to be
 
-        while(place>0){ //returns the bit with 0-s behind it to original place
-            tempnum=tempnum<<1;
-            place--;
-        }
+        tempnum=tempnum<<place;
+        place=0;
+
         num=num-tempnum;//subtracts the bit
     }
 
