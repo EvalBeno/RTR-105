@@ -13,7 +13,7 @@ int main()
     while(num!=0){
         tempnum=num;
         int place=0;
-        while(tempnum!=1 && tempnum!=0 && tempnum !=-1){ // Finds the most significant bit of the number
+        while(tempnum!=1 && tempnum!=0){ // Finds the most significant bit of the number
             tempnum=tempnum>>1;
             place++;
         }
