@@ -2,13 +2,13 @@
 
 int main()
 {
-    char num;
+    unsigned char num;
     printf("Enter an intiger to print a binary number: ");
     scanf("%d", &num);
-    const char PRIMARYNUM=num;
+    unsigned const char PRIMARYNUM=num;
     int bin[8]={0, 0, 0, 0, 0, 0, 0, 0};
 
-    char tempnum=num;
+    unsigned char tempnum=num;
 
     while(num!=0){
         tempnum=num;
@@ -33,7 +33,3 @@ int main()
 
     return 0;
 }
-
-/*
-It is buggy with numbers 192 and above, dont know why but for numbers bellow it it didn't seem to show any problems
-*/
