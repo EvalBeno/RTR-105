@@ -39,3 +39,4 @@ bash        Sets terminal to bash shell(default).
     ArrowDown   goes to the front in the list of typed commands.
     Tab         shows the list of commands according to your current entry, assumes what command you will use.
     Ctrl+L      Clears the screen.
+    Ctrl+C      Cancels the execution of command
