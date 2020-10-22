@@ -2,11 +2,11 @@
 
 int main()
 {
-	unsigned long int a, b;
+	long int a, b;
 	printf("Enter the multiplier (40,000): ");
-	scanf("%lu", &a);
+	scanf("%ld", &a);
 	printf("Enter the multiplicand (10,000): ");
-	scanf("%lu", &b);
-    printf("Solution is: %lu", a*b);
+	scanf("%ld", &b);
+    printf("Solution is: %ld", a*b);
     return 0;
 }
