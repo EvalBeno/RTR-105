@@ -13,7 +13,7 @@ Purpose
 This directory contains the code for calculating squared cosine for the function
 ===
 
-The code derived from this equation:![equation](http://www.sciweavers.org/tex2img.php?eq=cos%5E2%28x%29%3D1%2B%5Csum_%7Bn%3D1%7D%5E%7B500%7D%20%5Cfrac%7B%28-1%29%5Ek%2Ax%5E%7B2k%7D%2A2%5E%7B2k-1%7D%7D%7B%282k%29%21%7D%20&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0)
+The code derived from this equation:![equation](http://www.sciweavers.org/tex2img.php?eq=cos%5E2%28x%29%3D1%2B%5Csum_%7Bk%3D1%7D%5E%7B500%7D%20%5Cfrac%7B%28-1%29%5Ek%2Ax%5E%7B2k%7D%2A2%5E%7B2k-1%7D%7D%7B%282k%29%21%7D%20&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0)
 
 Using the Taylor Series method we can make a function which aproximates the squared cosine value fairly accurately as it can be seen in this graph:
 ===
