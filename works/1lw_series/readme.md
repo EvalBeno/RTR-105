@@ -1,26 +1,42 @@
-#Lab. Work No.1 Taylor Series  
+=
+Lab. Work No.1 Taylor Series  
+=
 
-##Source is free and available at https://github.com/EvalBeno/RTR-105/
+==
+Source is free and available at https://github.com/EvalBeno/RTR-105/
+==
 
-##Purpose
+==
+Purpose
+==
 
-###This directory contains the code for calculating squared cosine for the function
+===
+This directory contains the code for calculating squared cosine for the function
+===
 
 The code derived from this equation:![equation](http://www.sciweavers.org/tex2img.php?eq=1%2Bsin%28mc%5E2%29&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=)
 
-###Using the Taylor Series method we can make a function which aproximates the squared cosine value fairly accurately as it can be seen in this graph:
+===
+Using the Taylor Series method we can make a function which aproximates the squared cosine value fairly accurately as it can be seen in this graph:
+===
 
 ![Graph](Graph.png)
 
-####Thus meaning that we can use simple mathematical operations to find a value of a squared cosine.
+====
+Thus meaning that we can use simple mathematical operations to find a value of a squared cosine.
+====
 
 *Note:* This equation loses it's accuracy if we use value of x very distant from 0. This could be made to get a greater accuracy by recursively removing or adding pi and then using the Taylor Series method.
 
-##Usage
+==
+Usage
+==
 
 To compile use:`gcc Laboratory\ work\ Nr.1.c -lm`
 
-####There is also source code for the graphs made to use it:
+====
+There is also source code for the graphs made to use it:
+====
 
 To be able to use it you must have GNUPLOT installed.
 
@@ -30,5 +46,6 @@ And when you are inside GNUPLOT program type in:
 `load 'gnuplotscript.p'`  
 
 
-
-####This lab work was made as part of computer studies class in Riga Techincal University
+====
+This project was made as part of computer studies class in Riga Techincal University
+====
