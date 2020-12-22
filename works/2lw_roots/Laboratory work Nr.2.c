@@ -24,7 +24,7 @@ int main (){
             x=(a+b)/2;
             if(function(a, c)*function(x, c)>0) a=x;
             else b=x;
-            printf("At the %2u iteration: f(%.2lf)=%.2lf\n", t, x, function(x, c)+c);
+            printf("At the %2u iteration: f(%.2lf)=%.2lf\n", t, x, function(x, 0));
         }
     }
     else{
@@ -33,11 +33,11 @@ int main (){
             x=(a+b)/2;
             if(function(a, c)*function(x, c)>0) a=x;
             else b=x;
-            printf("At the %2u iteration: f(%.2lf)=%.2lf\n", t, x, function(x, c)+c);
+            printf("At the %2u iteration: f(%.2lf)=%.2lf\n", t, x, function(x, 0));
         }
     }
     printf("_______________________________________________\n");
-    printf("Function f(%lf)=%lf, and it took %u iterations.\n", x, function(x, c)+c, t);
+    printf("Function f(%lf)=%lf, and it took %u iterations.\n", x, function(x, 0), t);
     
     return 0;
 }
