@@ -3,7 +3,6 @@ Lab. Work No.1 Taylor Series
 =
 
 Source is free and available at https://github.com/EvalBeno/RTR-105/
-==
 
 
 Purpose
