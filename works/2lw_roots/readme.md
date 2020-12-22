@@ -3,7 +3,6 @@ Lab. Work No.2 Roots
 =
 
 Source is free and available at https://github.com/EvalBeno/RTR-105/
-=====
 
 
 Purpose
