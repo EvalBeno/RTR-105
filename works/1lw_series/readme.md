@@ -95,6 +95,32 @@ Usage
 
 To compile use:`gcc Laboratory\ work\ Nr.1.c -lm`
 
+After you launch the function it looks like this
+==
+```
+                        SQUARED COSINE CALCULATOR USING TAYLOR SERIES
+Enter value of x: 3  
+
+
+--------------------------------------
+|           500                      |
+|         -------                    |
+|          \         k  2k  2k-1     |
+|    2      \    (-1) *x  *2         |
+| cos (x)=    >  -----------------   |
+|           /          (2k)!         |
+|          /                         |
+|         -------                    |
+|           k=1                      |
+--------------------------------------
+
+a499=-0.000000000000000
+a500=0.000000000000000
+   2
+cos (3.000000)= 0.980085143325183
+Algorihtm Value: 0.980085143325182
+
+```
 
 There is also source code for the graphs made to use it:
 ====
