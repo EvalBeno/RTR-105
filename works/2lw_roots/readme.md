@@ -31,5 +31,4 @@ To compile use:`gcc Laboratory\ work\ Nr.2.c -lm`
 
 
 
-This project was made as part of computer studies class in Riga Techincal University
-=====
+*This project was made as part of computer studies class in Riga Techincal University*
