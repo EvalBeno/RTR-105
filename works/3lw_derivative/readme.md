@@ -9,6 +9,12 @@ Purpose
 ==
 
 
+First order numerical derivative is calculated like this:  
+![nderivative](nderivative.jpg)
+
+
+Second order numerical derivative is calculated like this:  
+![dderivative](dderivative.jpg)*
 
 Working Principle
 ==
@@ -102,8 +108,32 @@ x               f(x)            Analytical'     Numerical'      Analytical''    
 0.850000        0.435578        -0.991665       -0.983576       0.257689        0.257474
 0.900000        0.386399        -0.973848       -0.960875       0.454404        0.454026
 0.950000        0.338355        -0.946300       -0.928573       0.646579        0.646040
-
-
 ```
 
+Table for example of the result
+====
+x | f(x) | Analytical Derivative | Numerical Derivative | Analytical 2nd order Derivative | Numerical 2nd order Derivative
+------|--------|---------------|-----------|------------|-----------
+0.000000 | 1.000000 | -0.000000 | -0.099667 | -2.000000 | -1.993342
+0.100000 | 0.990033 | -0.198669 | -0.295028 | -1.960133 | -1.953608
+0.200000 | 0.960530 | -0.389418 | -0.478627 | -1.842122 | -1.835990
+0.300000 | 0.912668 | -0.564642 | -0.643145 | -1.650671 | -1.645176
+0.400000 | 0.848353 | -0.717356 | -0.782022 | -1.393413 | -1.388775
+0.500000 | 0.770151 | -0.841471 | -0.889723 | -1.080605 | -1.077007
+0.600000 | 0.681179 | -0.932039 | -0.961953 | -0.724716 | -0.722303
+0.700000 | 0.584984 | -0.985450 | -0.995833 | -0.339934 | -0.338803
+0.800000 | 0.485400 | -0.999574 | -0.990013 | 0.058399 | 0.058205
+0.900000 | 0.386399 | -0.973848 | -0.944724 | 0.454404 | 0.452892
+1.000000 | 0.291927 | -0.909297 | -0.861771 | 0.832294 | 0.829523
+
+
+
+
+
+
 *This project was made as part of computer studies class in Riga Techincal University*
+
+
+Citation:  
+*The second order derivative function is found here:  
+http://math.umd.edu/~dlevy/classes/amsc460/na-notes.pdf (p.95 fig.(5.5))
