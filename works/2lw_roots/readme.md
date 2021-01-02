@@ -60,7 +60,7 @@ int main (){
         return 1;
     }
     if(b>a){
-        while((function(b, c)-function(a, c))>precision){
+        while((b-a)>precision){
             t++;
             x=(a+b)/2;
             if(function(a, c)*function(x, c)>0) a=x;
@@ -69,7 +69,7 @@ int main (){
         }
     }
     else{
-        while((function(a, c)-function(b, c))>precision){
+        while((a-b)>precision){
             t++;
             x=(a+b)/2;
             if(function(a, c)*function(x, c)>0) a=x;
@@ -84,7 +84,7 @@ int main (){
 }
 
 double function(double x, double c){
-    return x-c;
+    return (cos(x)*cos(x))-c;
 }
 ```
 
@@ -97,7 +97,32 @@ To compile use:`gcc Laboratory\ work\ Nr.2.c -lm`
 After you launch the program in terminal it shows this
 ==
 ```
-
+In the interval [a:b]
+Enter the a value: -0.5
+Enter the b value: 1.5
+The function f(x)=c
+Enter the c value: 0.7
+Enter the precision(ex. 0.0001): 0.00001
+At the  1 iteration: f(0.50)=0.77
+At the  2 iteration: f(1.00)=0.29
+At the  3 iteration: f(0.75)=0.54
+At the  4 iteration: f(0.62)=0.66
+At the  5 iteration: f(0.56)=0.72
+At the  6 iteration: f(0.59)=0.69
+At the  7 iteration: f(0.58)=0.70
+At the  8 iteration: f(0.59)=0.69
+At the  9 iteration: f(0.58)=0.70
+At the 10 iteration: f(0.58)=0.70
+At the 11 iteration: f(0.58)=0.70
+At the 12 iteration: f(0.58)=0.70
+At the 13 iteration: f(0.58)=0.70
+At the 14 iteration: f(0.58)=0.70
+At the 15 iteration: f(0.58)=0.70
+At the 16 iteration: f(0.58)=0.70
+At the 17 iteration: f(0.58)=0.70
+At the 18 iteration: f(0.58)=0.70
+_______________________________________________
+Function f(0.579643)=0.699997, and it took 18 iterations.
 ```
 
 *This project was made as part of computer studies class in Riga Techincal University*

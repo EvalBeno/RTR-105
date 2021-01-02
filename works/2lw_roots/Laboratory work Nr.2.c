@@ -19,7 +19,7 @@ int main (){
         return 1;
     }
     if(b>a){
-        while((function(b, c)-function(a, c))>precision){
+        while((b-a)>precision){
             t++;
             x=(a+b)/2;
             if(function(a, c)*function(x, c)>0) a=x;
@@ -28,7 +28,7 @@ int main (){
         }
     }
     else{
-        while((function(a, c)-function(b, c))>precision){
+        while((a-b)>precision){
             t++;
             x=(a+b)/2;
             if(function(a, c)*function(x, c)>0) a=x;
@@ -43,5 +43,5 @@ int main (){
 }
 
 double function(double x, double c){
-    return x-c;
+    return (cos(x)*cos(x))-c;
 }
