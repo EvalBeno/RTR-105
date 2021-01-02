@@ -20,7 +20,7 @@ int main(){
         d_analytical[i]     =Derivative(x);
         dd_analytical[i]    =dDerivative(x);
         d_numerical[i]      =(function(x+delta)-function(x))/delta;
-        dd_numerical[i]     =(function(d_numerical[i]+delta)-function(d_numerical[i]))/delta;
+        dd_numerical[i]     =(function(x+delta)-2*function(x)+function(x-delta))/(delta*delta);
         x=x+delta;
     }
     
