@@ -7,14 +7,19 @@ Source is free and available at https://github.com/EvalBeno/RTR-105/
 
 Purpose
 ==
+This program can be used to find out the derivative of a function which can be modified in the code.
 
 
-First order numerical derivative is calculated like this:  
-![nderivative](nderivative.jpg)  
-
+* The program works by finding first order forward difference numerical derivative. Which is calculated like this:  
+  ![nderivative](nderivative.jpg)  
+* Also it calculates the analytical derivative which equals to: -sin(2*x)  
+* Then the second order derivative is calculated by having first order derivatives and dividing yet again by delta.  
+* Yet again it also calculates analytical derivative of the second order which equals to: -2cos(2x)  
+* Then it moves the new x value to x+Δ and the cycle continues until it reaches the indicated b value.
 
 Keeping in mind that this is positive difference you can calculate second order derivative but it will only work on the second value, therefore you can see that there is no value on the first numerical derivative since there is no difference.  
-This could be improved by using this equation found on http://math.umd.edu/~dlevy/classes/amsc460/na-notes.pdf (p.95 fig.(5.5)):![dderivative](dderivative.jpg)  
+*This could be improved by using this equation found on http://math.umd.edu/~dlevy/classes/amsc460/na-notes.pdf (p.95 fig.(5.5)):*  
+![dderivative](dderivative.jpg)  
 
 
 Table for example of the result when delta=0.05
@@ -42,14 +47,20 @@ x | f(x) | Analytical Derivative | Numerical Derivative | Analytical second orde
 0.900000 | 0.386399 | -0.973848 | -0.960875 | 0.454404 | 0.454026
 0.950000 | 0.338355 | -0.946300 | -0.928573 | 0.646579 | 0.646040
 
+By choosing smaller and smaller intervals you can increase the accuracy of the program
+===
 
+Example of the function which has delta of 0.15:
+====
+![delta.15](delta.15.png)  
 
-Working Principle
-==
+As you can see the function has a visible difference between analytical and numerical first order derivatives.  
 
+Example of the function which has delta of 0.01:
+====
+![delta.01](delta.01.png)
 
-
-
+As you can see the graph has smaller error when the delta approaches closer and closer to absolute zero.  
 
 Code for this method:
 ===
@@ -62,6 +73,22 @@ Code for this method:
 double function(double x);
 double Derivative(double x);
 double dDerivative(double x);
+//============================================
+
+void WriteToFile(double x_value[N], double F_value[N], double d_analytical[N], double dd_analytical[N], double d_numerical[N], double dd_numerical[N], int i){
+    
+    FILE* input = fopen("derivative.dat", "w");
+    
+    fprintf(input ,"#x\t\tf(x)\t\tAnalytical'\tNumerical'\tAnalytical''\tNumerical''\n");
+    fprintf(input ,"#-------------------------------------------------------------------------------------------\n");
+    fprintf(input ,"%lf\t%lf\t%lf\t%lf\t%lf\t\t\n", x_value[0], F_value[0], d_analytical[0], d_numerical[0], dd_analytical[0]);
+    for (int j=1; j<i; j++){
+        fprintf(input, "%lf\t%lf\t%lf\t%lf\t%lf\t%lf\n", x_value[j], F_value[j], d_analytical[j], d_numerical[j], dd_analytical[j], dd_numerical[j]);
+    }
+    fclose(input);
+}
+
+//==========================================
 
 int main(){
     double a, b, delta, x;
@@ -87,9 +114,11 @@ int main(){
     for (int j=1; j<i; j++){
         printf("%lf\t%lf\t%lf\t%lf\t%lf\t%lf\n", x_value[j], F_value[j], d_analytical[j], d_numerical[j], dd_analytical[j], dd_numerical[j]);
     }
+    
+    WriteToFile(x_value, F_value, d_analytical, d_numerical, dd_analytical, dd_numerical, i);
     return 0;
 }
-
+//=========================================
 double function(double x){
     return cos(x)*cos(x);
 }
@@ -101,7 +130,10 @@ double Derivative(double x){
 double dDerivative(double x){
     return -2*cos(2*x);
 }
+}
 ```
+**You can change maximum amount of individual x values by changing** `#define N 100` **100 value to any other value right now it holds 100 x values and derivatives**.  
+
 
 Usage
 ==
@@ -137,7 +169,7 @@ x               f(x)            Analytical'     Numerical'      Analytical''    
 0.900000        0.386399        -0.973848       -0.960875       0.454404        0.454026
 0.950000        0.338355        -0.946300       -0.928573       0.646579        0.646040
 ```
-
+*The program asks you for a, b, and delta this: begining of the interval or x, ending or last x value, and the length of steps that program makes*
 
 
 *This project was made as part of computer studies class in Riga Techincal University*
