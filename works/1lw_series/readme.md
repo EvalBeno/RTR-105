@@ -81,6 +81,13 @@ double Squared_Cosine(double x, int sumof)
     return S;
 }
 ```
+The function Squared_Cosine() works like this:  
+* Firstly the Squared_Cosine() takes two variables the number which needs to be calculated, and order of taylor polynomial
+* Then the function calculates the first member to sum, and sets the k(times to run the program to 2).
+* In the while loop it calculates all the members(a) and then sums up to sum(S), it runs until k reaches the sum of value.  
+*In the while loop there is if() statements, those are to show penultimate value and ultimate value, these are completely unnecessary and can be removed*
+* Then to correct the results since the cos^2 is shifted a bit upwards you just add 1
+
 
 Using the Taylor Series method we can make a function which aproximates the squared cosine value fairly accurately as it can be seen in this graph:
 ===
@@ -89,6 +96,11 @@ Using the Taylor Series method we can make a function which aproximates the squa
 
 **Thus meaning that we can use simple mathematical operations to find a value of a squared cosine.**
 
+Benefits of using this function:
+====
+If you know that your values which you plug in the function will be small, then you can optimize the function to sum up less members of the ∑ mathematical function. For values below 1 you can just sum up 3 taylor series polynomials significantly reducing the time that calculation takes place.
+
+Example: Computer games need to do a lot of computations for each frame and instead of using in cos() function from c standart library you can create your own to save some time for it to calculate the squared cosine.
 
 Usage
 ==
@@ -135,4 +147,3 @@ And when you are inside GNUPLOT program type in:
 
 
 *This project was made as part of computer studies class in Riga Techincal University*
-
