@@ -7,6 +7,16 @@ Source is free and available at https://github.com/EvalBeno/RTR-105/
 
 Purpose
 ==
+To find the integral or area between the function graph and x axis in the selected interval.  
+* The function 'rectangle(a, b, eps)' works by using this function: ![square](square.svg)  
+* The function 'trapezoidal(a, b, eps)' works by using this function: ![trapezoidal](trapezoid.svg)  
+* The function 'simpsons(a, b, eps)' works by using this function: ![simpsons](simpsons.svg)  
+
+Here is the representation of how it works and wolfram alpha images:
+===
+![area](area.png)  
+![wolfram](wolfram.png)  
+
 
 Code for this method:
 ===
