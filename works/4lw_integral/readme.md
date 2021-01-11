@@ -8,9 +8,18 @@ Source is free and available at https://github.com/EvalBeno/RTR-105/
 Purpose
 ==
 To find the integral or area between the function graph and x axis in the selected interval.  
-* The function 'rectangle(a, b, eps)' works by using this function: ![square](square.svg)  
-* The function 'trapezoidal(a, b, eps)' works by using this function: ![trapezoidal](trapezoid.svg)  
-* The function 'simpsons(a, b, eps)' works by using this function: ![simpsons](simpsons.svg)  
+* The function `rectangle(a, b, eps)` works by using this function: ![square](square.svg)  
+
+The rectangular works by calculating the rectangle area in the intervals of eps magnitude and calculating it until it hits b value.  
+
+
+* The function `trapezoidal(a, b, eps)` works by using this function: ![trapezoidal](trapezoid.svg)  
+
+The trapezoidal works by calculating the area of trapeze in the intervals of eps magnitude and calculating it from a until it hits b value.  
+
+* The function `simpsons(a, b, eps)` works by using this function: ![simpsons](simpsons.svg)  
+
+The Simpson's rule works by calculating a curve area between in the interval
 
 Here is the representation of how it works and wolfram alpha images:
 ===
